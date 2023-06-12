@@ -7,60 +7,63 @@ main {
   min-height: 100vh;
 }
 
+
+
 body {
     font-family: 'Rubik', sans-serif;
+      background-image: url(https://wallpaperaccess.com/full/7152622.jpg);
+  background-position-y: top;
+  background-repeat: no-repeat;
 }
 
 nav {
-  overflow: hidden;
+    color: white;
+    font-size: 25px;
 }
-
 .logo {
-  height: 20px;
-  width: 20px;
+  height: 50px;
+  width: 50px;
   float: left;
+  padding: 5px;
 }
-
-.nav-links {
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    /* margin-left: 30% ; */
+    padding: 14px 16px;
+    justify-content: center; 
+}
+​
+nav a {
+    list-style: none; 
     text-align: center;
-    top: 0%;
-    right: -50%;
-justify-content: center;
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
 }
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+    border-radius: 2px;
+    padding: 5px;
+}
+​
 
-.cart-btn{
+
+.cart-img{
     top: 0%;
     float: right;
+    margin-left: 10%;
     background-color: #04aa6d;
     color: white;
 }
 
 
-.Intro-title {
-  font-size: 100px;
+.title {
+  font-size: 100px !important;
   font-family: "Lora", serif;
+  color: white;
   font-style: italic;
-}
-
-.topnav {
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Create a right-aligned (split) link inside the navigation bar */
-.topnav a.split {
-
 }
