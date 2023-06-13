@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/Products.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Esoteric</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/assets/without word-foto.png" alt="logo" width="65" height="50">
+                </a>
+                <ul class="nav m-auto justify-content-center">
+                    <li class=" nav-item">
+                        <a id="links" class="nav-link active" aria-current="page" href="/Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="links" class="nav-link" href="/Otherpages/Products.html">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="links" class="nav-link" href="/Otherpages/About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="links" class="nav-link" href="/Otherpages/Contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a class="cart-btn" href="">Cart</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Home page... Slide show of popular picks -->
+    <!-- Preview carasoule -->
+
+    <section id="Carousel" class=" bg-secondary">
+        <div id="carouselExampleIndicators" class="carousel slide p-5" data-bs-ride="carousel">
+            <button class="carousel-control-prev caro-btn" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next caro-btn" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-2.jpg"
+                        class="float-end d-block w-50 p-5" alt="...">
+                    <div class=" m-5 text-center p-5">
+                        <h3> A book</h3>
+                        <h3> The Author</h3>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minima, sapiente natus,
+                            accusamus nostrum,
+                            reiciendis placeat facere ad consequatur distinctio eaque officia enim? Eligendi quaerat
+                            autem nihil totam
+                            ad tenetur?
+                        </p>
+                        <p class="m-4">R $$ <button class="m-4">Buy</button></p>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-1.jpg"
+                        class="float-end d-block w-50 p-5" alt="...">
+                    <div class=" m-5 text-center p-5">
+                        <h3> A book 2</h3>
+                        <h3> The Author</h3>
+                        <p>A tenetur, explicabo repudiandae vero, eum quia aliquam nam earum animi dolor eveniet,
+                            praesentium vitae
+                            voluptate numquam in laborum unde! Molestiae, ipsa. Eum, vel? Autem delectus debitis minus
+                            cumque
+                            perferendis!
+                        </p>
+                        <p class="m-4">R $$ <button class="m-4"> Buy </button></p>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-3.jpg"
+                        class="float-end d-block w-50 p-5" alt="...">
+                    <div class=" m-5 text-center p-5">
+                        <h3> A book 3</h3>
+                        <h3> The Author</h3>
+                        <p> Voluptates atque, mollitia temporibus totam at reprehenderit veritatis. Modi officia
+                            dignissimos,
+                            cupiditate iusto harum recusandae dolorem nulla distinctio, ea accusamus nisi quasi maxime
+                            quo
+                            quas odio,
+                            quae rem illum eius.
+                        </p>
+                        <p class="m-4">R $$ <button class="m-4">Buy</button></p>
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="carousel-indicators mt-5">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+        </div>
+    </section>
+ <!-- cart  -->
+ <div class="cart-modal-overlay">
+    <div class="cart-modal">
+      <i id="close-btn" class="fas fa-times"></i>
+      <h1 class="cart-is-empty">Cart is empty</h1>
+      <div class="product-rows">
+      </div>
+      <div class="total">
+        <h1 class="cart-total">TOTAL</h1>
+        <span class="total-price">$0</span>
+        <button class="purchase-btn">PURCHASE</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- body body AKA Products -->
+    <main>
+        <h1 class="text-center"> Library </h1>
+        <div class="container">
+            <div class="row" id="books"></div>
+        </div>
+
+        <div class=" mt-5 container-fluid" id="products">
+            <div class="row">
+                <div class="novel text-center mt-5" id="novels_section">
+                    <h2>Novels</h2>
+                    <div class="row row-cols-3 d-flex" id="novels">
+
+                    </div>
+                </div>
+                <div class="comics text-center mt-5" id="comics section">
+                    <h2>Comics</h2>
+                    <div class="row row-cols-3 d-flex" id="comics">
+
+                    </div>
+                </div>
+                <div class="self-class text-center mt-5" id="help_section">
+                    <h2>Self</h2>
+                    <div class="row row-cols-3 d-flex" id="helps">
+
+                    </div>
+                </div>
+                <div class="poetry text-center mt-5" id="poetry_section">
+                    <h2>Poetry</h2>
+                    <div class="row row-cols-3 d-flex" id="poetry">
+
+                    </div>
+                </div>
+                <div class="romance text-center mt-5" id="romance_section">
+                    <h2>Romance</h2>
+                    <div class="row row-cols-3 d-flex" id="romance">
+
+                    </div>
+                </div>
+                <div class="biography text-center mt-5 mb-5" id="biography_section">
+                    <h2>Biography</h2>
+                    <div class="row row-cols-3 d-flex" id="biography">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <br>
+        <div class="icons text-center">
+            <a class="m-5" href=""><i class="fa fa-phone icon"></i></a>
+            <a class="m-5" href=""><i class="fa fa-envelope icon"></i></a>
+            <a class="m-5" href=""><i class="fa-brands fa-instagram icon"></i></a>
+            <a class="m-5" href=""><i class="fa fa-location-dot icon"></i></a>
+            <a class="m-5" href=""><i class="fa fa-globe icon"></i></a>
+        </div>
+        <br>
+        <div class="container mb-2 text-center">
+            <div class="row align-items-end">
+                <div class="col">
+                    <a class="me-5 foot" href="/Otherpages/About.html">Story</a>
+                    <a class="me-5 foot" href="/Otherpages/Products.html">Books</a>
+                    <a class="me-5 foot" href="/Otherpages/Admin.html">Admin</a>
+                    <a class="me-5 foot" href="/Otherpages/Contact.html">Contact Us</a>
+                </div>
+                <h3 class="col foot_title">Esoteric</h3>
+                <div class="col copyright">
+                    © Copyright by Olwethu | 2023 </div>
+            </div>
+        </div>
+        <br>
+    </footer>
+
+
+    <!--links -->
+    <script src="/js/Products.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/850ca6a355.js"></script>
+</body>
+
+</html>
