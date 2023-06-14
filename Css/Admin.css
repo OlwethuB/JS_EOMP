@@ -75,7 +75,51 @@
     min-height: 100vh;
     background-color: #7d7d7d;
   }
-  
+/* admin */
+.admin-content {
+}
+
+/* admin content content */
+  table {
+    margin-top: 100px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  th {
+padding: 15px;
+text-align: center;
+border-bottom: 1px solid #faf7f7;
+  }
+
+td {
+    border-bottom: 2px solid #000;
+}
+
+.edit {
+    color: green;
+} 
+
+.edit:hover{
+    color: #000;
+    border: 2px solid green;
+    background-color: green;
+
+}
+
+.delete {
+    color: red;
+}
+
+.delete:hover{
+    color: #000;
+    border: 2px solid red;
+    background-color: red;
+}
+
+
   /* footer */
   .foot {
     text-decoration: none;
