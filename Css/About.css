@@ -99,6 +99,12 @@ main {
   font-style: italic;
 }
 
+.icon {
+  width: 100px;
+      color: #000;
+      font-size: 22px;
+    }
+
 footer {
   background-color: #042a5b;
   font-family: "Rubik", sans-serif;
