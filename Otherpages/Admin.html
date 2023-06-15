@@ -42,49 +42,45 @@
     </header>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center">
-            <h4 class="modal-title w-100 font-weight-bold">Add new item</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body mx-3">
-            <div class="md-form mb-5">
-              <i class="fas fa-user prefix grey-text"></i>
-              <input type="text" id="form34" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="form34">Your name</label>
+        <div
+            class="modal fade"
+            id="NewProduct"
+            tabindex="-1"
+            aria-labelledby="addNewProductLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="addNewProductLabel">Add a new product</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form class="form g-2">
+                    <div class="container">
+                      <input class="form-control" type="text" placeholder="Enter the name of the book" name="addName" id="addName" required />
+                      <input class="form-control my-2" type="text" placeholder="Enter Author name" name="addAuthor" id="addAuthor" required></input>
+                      <input class="form-control" type="number" placeholder="Enter price" name="addPrice" id="addPrice" required/>
+                    <select class="form-control my-2" name="addCategory" id="addCategory" required>
+                    <option value="placeholder">In what Category</option>
+                    <option value="Novel">Novel</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Biography">Biography</option>
+                    <option value="Comics">Comics</option>
+                    <option value="Self-Help">Self-Help</option>
+                    <option value="Poetry">Poetry</option>
+                </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer my-2">
+                  <button type="button" class="btn btn-success" id="addProduct"> Add Product</button>
+                  <input class="btn btn-danger" type="reset" value="Clear">
+                </div>
+              </div>
             </div>
-    
-            <div class="md-form mb-5">
-              <i class="fas fa-envelope prefix grey-text"></i>
-              <input type="email" id="form29" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="form29">Your email</label>
-            </div>
-    
-            <div class="md-form mb-5">
-              <i class="fas fa-tag prefix grey-text"></i>
-              <input type="text" id="form32" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="form32">Subject</label>
-            </div>
-    
-            <div class="md-form">
-              <i class="fas fa-pencil prefix grey-text"></i>
-              <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
-              <label data-error="wrong" data-success="right" for="form8">Your message</label>
-            </div>
-    
-          </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <button class="btn btn-unique">Add <i class="fas fa-paper-plane-o ml-1"></i></button>
-            <input type="reset" value="Clear">
           </div>
         </div>
-      </div> 
-    </div>
     <br>
     
 
@@ -92,13 +88,14 @@
     <br>
     <main>
         <br>
-        <div class="admin p-5">
+        <div class="admin-content p-5">
             <div class="button-group mt">
                 <!-- open the modal -->
-                <button type="button" class="btn btn-success text-center" data-toggle="modal" data-target="#modalContactForm">Add</button>
+                <button type="button" class="btn btn-success text-center" id="new" data-bs-toggle="modal" data-bs-target="#NewProduct">Add</button>
                 <!-- sort by categories -->
-                <label for="sort">Sort : </label>
-                <select name="sort" id="sort">
+                <label class="ms-4 sort" for="sort">Sort : </label>
+                <select class="bg-primary p-2 select" name="sort" id="sort">
+                    <option value="Random sort" id="sorting"> Random Sort</option>
                     <option value="by ID">Number</option>
                     <option value="by Name">Name</option>
                     <option value="by price">Price</option>
@@ -107,7 +104,7 @@
             </div>
 
             <div class="content">
-                <h2 class="title mt-3"> Admin dashboard</h2>
+                <h2 class="title mt-3 text-center"> Admin dashboard</h2>
 
                 <table>
                     <thead>
@@ -125,9 +122,171 @@
                             <td>Biography</td>
                             <td>10</td>
                             <td>R 1809</td>
-                            <td class="edit"> Edit</td>
-                            <td class="delete" onclick='deleteProduct()'> Delete </td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
                         </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>To kill a Mockingbird by Harper Lee</td>
+                            <td>Novel</td>
+                            <td>10</td>
+                            <td>R 234</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>2</td>
+                            <td>The Alchemist by Paulo Coelho</td>
+                            <td>Novel</td>
+                            <td>10</td>
+                            <td>R 124</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>3</td>
+                            <td>The Hitchhiker’s Guide to the Galaxy by Douglas Adams</td>
+                            <td>Novel</td>
+                            <td>10</td>
+                            <td>R 250</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>4</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>5</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>6</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>7</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>8</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>9</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>10</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>11</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>12</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>13</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>14</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>15</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>16</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>
+                         <tr>
+                            <td>17</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>  
+                          <tr>
+                            <td>18</td>
+                            <td>John by John Doe</td>
+                            <td>Biography</td>
+                            <td>10</td>
+                            <td>R 1809</td>
+                            <td class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit</td>
+                            <td class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</td>
+                        </tr>                                              
                     </tbody>
                 </table>
             </div>
