@@ -38,12 +38,12 @@ let Products = JSON.parse(localStorage.getItem('Books')) || [
   },
   {
     id:'4',
-    name: "Book1",
+    name: "The Power of Now: A Guide to Spiritual Enlightenment",
     image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+      "https://i.postimg.cc/65n3NnCK/6708.jpg",
+    author: " Eckhart Tolle",
     category: "Self-help",
-    price: " 926",
+    price: " 405",
     quantity: 10,
   },
   {
@@ -99,12 +99,12 @@ let Products = JSON.parse(localStorage.getItem('Books')) || [
   },
   {
     id:'10',
-    name: "Book2",
+    name: "Rich Dad Poor Dad",
     image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+      "https://i.postimg.cc/QdqdFD6n/image.jpg",
+    author: "Robert Kiyosaki and Sharon Lechter",
     category: "Self-help",
-    price: " 926",
+    price: " 368",
     quantity: 10,
   },
   {
@@ -160,12 +160,12 @@ let Products = JSON.parse(localStorage.getItem('Books')) || [
   },
   {
     id:'16',
-    name: "Book3",
+    name: "Atomic Habits",
     image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+      "https://i.postimg.cc/xCXfpz9W/image.jpg",
+    author: "James Clear",
     category: "Self-help",
-    price: " 926",
+    price: " 450",
     quantity: 10,
   },
   {
@@ -444,9 +444,9 @@ function updateCart() {
       cartProduct.innerHTML = `
       <span>${product.name}</span>
       <span>${product.author}</span>
-      <span>${product.price}</span>
+      <span>R ${product.price}</span>
       <input type="number" placeholder="1" min="1" width="50px" height="40px">
-      <p>Total ${product.price}</p>
+      <p>R ${product.price}</p>
       <button onclick="deleteFromCart(${index})" class="delbtn">Delete</button>`;
       cartContainer.appendChild(cartProduct);
   });
