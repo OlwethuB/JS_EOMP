@@ -5,7 +5,7 @@ let products = JSON.parse(localStorage.getItem("Books"));
 let saveProduct = document.querySelector("#addProduct");
 let adminBody = document.querySelector("#adminContent");
 
-//  
+// Displaying 
 function display() {
   try {
     adminBody.innerHTML = "";

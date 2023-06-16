@@ -60,7 +60,7 @@ let Products = JSON.parse(localStorage.getItem("Books")) || [
     price: " 427",
     quantity: 10,
   },
-  // Add more product objects here
+  // Add more product objects here 
   {
     id: "7",
     name: "The Alchemist",
