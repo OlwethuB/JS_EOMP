@@ -1,71 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/Css/Products.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <title>Esoteric</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navigation -->
     <header id="header">
-        <nav class="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="/assets/without word-foto.png" alt="logo" width="65" height="50">
-                </a>
-                <ul class="nav m-auto justify-content-center">
-                    <li class=" nav-item">
-                        <a id="links" class="nav-link active" aria-current="page" href="/Index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="links" class="nav-link" href="/Otherpages/Products.html">Books</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="links" class="nav-link" href="/Otherpages/About.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="links" class="nav-link" href="/Otherpages/Contact.html">Contact</a>
-                    </li>
-                </ul>
-                <div class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal" href="#">
-                    <i id="cart" class="fas fa-shopping-cart"></i>
-                    <span class="cart-quantity">0</span>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="/assets/without word-foto.png"
+              alt="logo"
+              width="65"
+              height="50"
+            />
+          </a>
+          <ul class="nav m-auto justify-content-center">
+            <li class="nav-item">
+              <a
+                id="links"
+                class="nav-link active"
+                aria-current="page"
+                href="/Index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a id="links" class="nav-link" href="/Otherpages/Products.html"
+                >Books</a
+              >
+            </li>
+            <li class="nav-item">
+              <a id="links" class="nav-link" href="/Otherpages/About.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a id="links" class="nav-link" href="/Otherpages/Contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div
+            class="cart-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#cartModal"
+            href="#"
+          >
+            <i id="cart" class="fas fa-shopping-cart"></i>
+            <span class="cart-quantity">0</span>
+          </div>
+        </div>
+      </nav>
     </header>
-
 
     <!-- the place that makes sense for cart (I guess...) -->
     <!-- cart  -->
     <div class="modal" id="cartModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title"> Cart Checkout</h4>
-                    <button type="button" class="btn btn-close btn-danger" data-bs-dismiss="modal"></button>
-                </div>
-                <div id="cartBody">
-                    <div id="results">
-                        <h4>Total</h4>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <p>Total: <span id="total"></span></p>
-                </div>
+      <div class="modal-dialog">
+        <div class="modal-content bg-success-subtle">
+          <div class="modal-header">
+            <h4 class="modal-title text-center justify-content-center">Cart Checkout</h4>
+            <button
+              type="button"
+              class="btn btn-close btn-danger"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="ms-3" id="cartBody">
+            <div id="results">
+              <h4>Total</h4>
             </div>
+          </div>
+          <div class="modal-footer">
+            <p>Total: <span id="total"></span></p>
+          </div>
         </div>
+      </div>
     </div>
-
 
     <!-- <div class="cart-modal-overlay">
             <div class="cart-modal">
@@ -83,166 +119,272 @@
     <!-- Home page... Slide show of popular picks -->
     <!-- Preview carasoule -->
 
-    <section id="Carousel" class=" bg-secondary">
-        <div id="carouselExampleIndicators" class="carousel slide p-5" data-bs-ride="carousel">
-            <button class="carousel-control-prev caro-btn" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next caro-btn" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-2.jpg"
-                        class="float-end d-block w-50 p-5" alt="...">
-                    <div class=" m-5 text-center p-5">
-                        <h3> A book</h3>
-                        <h3> The Author</h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minima, sapiente natus,
-                            accusamus nostrum,
-                            reiciendis placeat facere ad consequatur distinctio eaque officia enim? Eligendi quaerat
-                            autem nihil totam
-                            ad tenetur?
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-1.jpg"
-                        class="float-end d-block w-50 p-5" alt="...">
-                    <div class=" m-5 text-center p-5">
-                        <h3> A book 2</h3>
-                        <h3> The Author</h3>
-                        <p>A tenetur, explicabo repudiandae vero, eum quia aliquam nam earum animi dolor eveniet,
-                            praesentium vitae
-                            voluptate numquam in laborum unde! Molestiae, ipsa. Eum, vel? Autem delectus debitis minus
-                            cumque
-                            perferendis!
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-3.jpg"
-                        class="float-end d-block w-50 p-5" alt="...">
-                    <div class=" m-5 text-center p-5">
-                        <h3> A book 3</h3>
-                        <h3> The Author</h3>
-                        <p> Voluptates atque, mollitia temporibus totam at reprehenderit veritatis. Modi officia
-                            dignissimos,
-                            cupiditate iusto harum recusandae dolorem nulla distinctio, ea accusamus nisi quasi maxime
-                            quo
-                            quas odio,
-                            quae rem illum eius.
-                        </p>
-                    </div>
-                </div>
+    <section id="Carousel" class="bg-secondary">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide p-5"
+        data-bs-ride="carousel"
+      >
+        <button
+          class="carousel-control-prev caro-btn"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next caro-btn"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <div
+          class="carousel-inner p-5 justify-content-center align-self-center"
+        >
+          <div class="carousel-item active cara">
+            <img
+              src="/assets/Book Covers/hitchhikerguide.jpg"
+              class="float-end d-flex w-50 p-5 cat-img"
+              alt="..."
+              loading="eager"
+            />
+            <div class="text-center m-5 w-50">
+              <h3>The Hitchhiker’s Guide to the Galaxy</h3>
+              <h4>Douglas Adams</h4>
+              <p>
+                a satire on what happens around the world and what we're doing
+                to our planet and is still relevant today. In the story, Vogons
+                are an alien race destroying planets to make way for
+                construction of a new hyperspace bypass.
+              </p>
             </div>
-            <br>
-            <div class="carousel-indicators mt-5">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-item cara justify-content-center">
+            <img
+              src="https://i.postimg.cc/gc80R3j7/honey-spice.jpg"
+              class="float-end d-block w-50 p-5 cat-img"
+              alt="..."
+            />
+            <div class="text-center m-5 w-50">
+              <h3>Honey and Spice: A Reese's Book Club Pick</h3>
+              <h4>Bolu Babalola</h4>
+              <p>
+                Honey and Spice is centered around Kikiola Banjo, a college
+                student and aspiring journalist, who meets Malakai Korede, an
+                enigmatic and charming transfer student. The ensuing story draws
+                upon romance tropes that the TikTok community is currently
+                fascinated by: fake dating, enemies-to-lovers, and university
+                love.
+              </p>
             </div>
+          </div>
+          <div class="carousel-item cara">
+            <img
+              src="https://i.postimg.cc/9QsJq3rZ/9781449489755-pdpxl.jpg"
+              class="float-end d-block w-50 p-2 cat-img"
+              alt="..."
+            />
+            <div class="text-center m-5">
+              <h3>Pillow Thoughts</h3>
+              <h4>Courtney Peppernellr</h4>
+              <p>
+                Pillow Thoughts is a collection of poetry and prose about
+                heartbreak, love, and raw emotions. It is divided into sections
+                to read when you feel you need them most. Make a cup of tea and
+                let yourself feel. Pillow Thoughts is a collection of poetry and
+                prose about heartbreak, love, and raw emotions.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item cara">
+            <img
+              src="https://i.postimg.cc/xCXfpz9W/image.jpg"
+              class="float-end d-block h w-50 p-2 cat-img"
+              alt="..."
+              loading="eager"
+            />
+            <div class="text-center m-5">
+              <h3>Atomic Habits</h3>
+              <h4>James Clear</h4>
+              <p>
+                Atomic Habits is all about making small improvements -
+                unnoticeable on a day-to-day basis but far more meaningful in
+                the long run. Little decisions and choices made over and over
+                will start to add up and create significant results
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item cara">
+            <img
+              src="/assets/Book Covers/Noughts and crosses.jpg"
+              class="float-end d-block w-50 p-2 cat-img"
+              alt="..."
+            />
+            <div class="text-center m-5">
+              <h3>Noughts & Crosses (Graphic Novel)</h3>
+              <h4>Ian Edginton/Novel by Malorie Blackman</h4>
+              <p>
+                Noughts & Crosses by Malorie Blackman is a novel set in a
+                dystopian Britain in which society is divided by racism .
+                Dark-skinned Crosses are privileged in society over the
+                light-skinned noughts. Against the odds, the main characters,
+                Sephy and Callum, fall in love across the divide which leads
+                them into danger
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item row cara">
+            <img
+              src="/assets/Book Covers/Steve Jobs.jpg"
+              class="float-end d-block w-50 p-2 cat-img"
+              alt="..."
+            />
+            <div class="text-center m-5">
+              <h3>Steve Jobs</h3>
+              <h4>Walter Isaacson</h4>
+              <p>
+                The book highlights several of his multifold leadership traits,
+                forcing you to overlook his negative qualities. If you
+                appreciate and admire Steve Jobs and his accomplishments, this
+                is a book that is especially worth reading.
+              </p>
+            </div>
+          </div>
         </div>
+        <br />
+        <div class="carousel-indicators mt-5">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="5"
+            aria-label="Slide 6"
+          ></button>
+        </div>
+      </div>
     </section>
-
-
 
     <!-- body body AKA Products -->
     <main>
-        <h1 class="text-center"> Library </h1>
-        <div class="container">
-            <div class="row" id="books"></div>
+      <h1 class="text-center">Library</h1>
+
+      <!-- <div class="container">
+        <select id="sortingSelect" onchange="sortProducts()">
+          <option>Default sorting</option>
+          <option>Sort by price</option>
+          <option>Sort by popularity</option>
+        </select>
+      </div> -->
+
+      <div class="mt-5 container-fluid" id="products">
+        <div class="row">
+          <div class="novel text-center mt-5" id="novels_section">
+            <h2>Novels</h2>
+            <div class="row row-col-9 row-col-lg-9 d-flex" id="novels"></div>
+          </div>
+          <div class="comics text-center mt-5" id="comics_section">
+            <h2>Comics</h2>
+            <div class="row row-col-9 row-col-lg-9 d-flex" id="comics"></div>
+          </div>
+          <div class="self-class text-center mt-5" id="help_section">
+            <h2>Self</h2>
+            <div class="row row-col-9 row-col-lg-9 d-flex" id="helps"></div>
+          </div>
+          <div class="poetry text-center mt-5" id="poetry_section">
+            <h2>Poetry</h2>
+            <div class="row row-col-9 row-col-lg-9 d-flex" id="poetry"></div>
+          </div>
+          <div class="romance text-center mt-5" id="romance_section">
+            <h2>Romance</h2>
+            <div class="row row-col-9 row-col-lg-9 d-flex" id="romance"></div>
+          </div>
+          <div class="biography text-center mt-5 mb-5" id="biography_section">
+            <h2>Biography</h2>
+            <div class="row row-col-9 row-col-lg-9 d-flex" id="biography"></div>
+          </div>
         </div>
-
-        <div class=" mt-5 container-fluid" id="products">
-            <div class="row">
-                <div class="novel text-center mt-5" id="novels_section">
-                    <h2>Novels</h2>
-                    <div class="row row-cols-3 d-flex" id="novels">
-
-                    </div>
-                </div>
-                <div class="comics text-center mt-5" id="comics section">
-                    <h2>Comics</h2>
-                    <div class="row row-cols-3 d-flex" id="comics">
-
-                    </div>
-                </div>
-                <div class="self-class text-center mt-5" id="help_section">
-                    <h2>Self</h2>
-                    <div class="row row-cols-3 d-flex" id="helps">
-
-                    </div>
-                </div>
-                <div class="poetry text-center mt-5" id="poetry_section">
-                    <h2>Poetry</h2>
-                    <div class="row row-cols-3 d-flex" id="poetry">
-
-                    </div>
-                </div>
-                <div class="romance text-center mt-5" id="romance_section">
-                    <h2>Romance</h2>
-                    <div class="row row-cols-3 d-flex" id="romance">
-
-                    </div>
-                </div>
-                <div class="biography text-center mt-5 mb-5" id="biography_section">
-                    <h2>Biography</h2>
-                    <div class="row row-cols-3 d-flex" id="biography">
-
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </main>
 
     <!-- footer -->
     <footer>
-        <br>
-        <div class="icons text-center">
-            <a class="m-5" href=""><i class="fa fa-phone icon"></i></a>
-            <a class="m-5" href=""><i class="fa fa-envelope icon"></i></a>
-            <a class="m-5" href=""><i class="fa-brands fa-instagram icon"></i></a>
-            <a class="m-5" href=""><i class="fa fa-location-dot icon"></i></a>
-            <a class="m-5" href=""><i class="fa fa-globe icon"></i></a>
+      <br />
+      <div class="icons text-center p-2">
+        <a class="m-1" href="http://spittoon.co.uk/wp-content/uploads/2019/01/error-meme.jpg"><i class="fa fa-phone icon"></i></a>
+        <a class="m-1" href="https://media.makeameme.org/created/hello-rtr56j.jpg"><i class="fa fa-envelope icon"></i></a>
+        <a class="m-1" href="https://goo.gl/maps/qnR6RGGvVR6MZyDb6?coh=178573&entry=tt"><i class="fa-brands fa-instagram icon"></i></a>
+        <a class="m-1" href="https://goo.gl/maps/qnR6RGGvVR6MZyDb6?coh=178573&entry=tt"><i class="fa fa-location-dot icon"></i></a>
+        <a class="m-1" href="/Otherpages/Esoteric Creatives.html"><i class="fa fa-globe icon"></i></a>
+      </div>
+      <br />
+      <div class="container mb-2 text-center">
+        <div class="row align-items-end">
+          <div class="col">
+            <a class="me-2 foot" href="/Otherpages/About.html">Story</a>
+            <a class="me-2 foot" href="/Otherpages/Products.html">Books</a>
+            <a class="me-2 foot" href="/Otherpages/Admin.html" target="_blank">Admin</a>
+            <a class="me-2 foot" href="/Otherpages/Contact.html">Contact Us</a>
+          </div>
+          <h3 class="col foot_title">Esoteric</h3>
+          <div class="col copyright">© Copyright by Olwethu | 2023</div>
         </div>
-        <br>
-        <div class="container mb-2 text-center">
-            <div class="row align-items-end">
-                <div class="col">
-                    <a class="me-5 foot" href="/Otherpages/About.html">Story</a>
-                    <a class="me-5 foot" href="/Otherpages/Products.html">Books</a>
-                    <a class="me-5 foot" href="/Otherpages/Admin.html" target="_blank">Admin</a>
-                    <a class="me-5 foot" href="/Otherpages/Contact.html">Contact Us</a>
-                </div>
-                <h3 class="col foot_title">Esoteric</h3>
-                <div class="col copyright">
-                    © Copyright by Olwethu | 2023 </div>
-            </div>
-        </div>
-        <br>
+      </div>
+      <br />
     </footer>
-
 
     <!--links -->
     <script src="/js/Products.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://kit.fontawesome.com/850ca6a355.js"></script>
-</body>
-
+  </body>
 </html>

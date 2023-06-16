@@ -4,12 +4,11 @@
 // let display = document.getElementById("books");
 // document.head.appendChild(linkElement);
 
-let Products = JSON.parse(localStorage.getItem('Books')) || [
+let Products = JSON.parse(localStorage.getItem("Books")) || [
   {
-    id:'1',
+    id: "1",
     name: "To kill a Mockingbird",
-    image:
-      "/assets/Book Covers/Tokillamockingbird.png",
+    image: "/assets/Book Covers/Tokillamockingbird.png",
     author: "Harper Lee",
     category: "Novel",
     price: " 234",
@@ -17,190 +16,163 @@ let Products = JSON.parse(localStorage.getItem('Books')) || [
   },
   // Add more product objects here
   {
-    id:'2',
-    name: "Book1",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "Something",
+    id: "2",
+    name: "Cinderella is Dead",
+    image: "https://i.postimg.cc/sxhsJC3S/376097366609179215.jpg",
+    author: "Kalynn Bayron",
     category: "Romance",
-    price: " 926",
+    price: " 400",
     quantity: 10,
   },
   {
-    id:'3',
-    name: "Book1",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+    id: "3",
+    name: "Milk and honey",
+    image: "https://i.postimg.cc/VvPx9rv9/9781449474256-pdpxl.jpg",
+    author: "Rupi Kaur",
     category: "Poetry",
-    price: " 926",
+    price: " 353",
     quantity: 10,
   },
   {
-    id:'4',
+    id: "4",
     name: "The Power of Now: A Guide to Spiritual Enlightenment",
-    image:
-      "https://i.postimg.cc/65n3NnCK/6708.jpg",
+    image: "https://i.postimg.cc/65n3NnCK/6708.jpg",
     author: " Eckhart Tolle",
     category: "Self-help",
     price: " 405",
     quantity: 10,
   },
   {
-    id:'5',
-    name: "Book1",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+    id: "5",
+    name: "Kwezi",
+    image: "https://i.postimg.cc/JtCDNqCr/image.jpg",
+    author: "Loyiso Mkize",
     category: "Comics",
-    price: " 926",
+    price: " 435",
     quantity: 10,
   },
   {
-    id:'6',
-    name: "Book1",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+    id: "6",
+    name: "Steve Jobs",
+    image: "/assets/Book Covers/Steve Jobs.jpg",
+    author: "Walter Isaacson",
     category: "Biography",
-    price: " 926",
+    price: " 427",
     quantity: 10,
   },
   // Add more product objects here
   {
-    id:'7',
+    id: "7",
     name: "The Alchemist",
-    image:
-      "/assets/Book Covers/theAlchemist.jpg",
+    image: "/assets/Book Covers/theAlchemist.jpg",
     author: "Paulo Coelho",
     category: "Novel",
-    price: " 124",
+    price: " 224",
     quantity: 10,
   },
   {
-    id:'8',
-    name: "Book2",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+    id: "8",
+    name: "Pride and Prejudice",
+    image: "https://i.postimg.cc/jSsCRCsF/image.jpg",
+    author: "Jane Austen",
     category: "Romance",
-    price: " 926",
+    price: " 316",
     quantity: 10,
   },
   {
-    id:'9',
-    name: "Book2",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+    id: "9",
+    name: "Don't Call Us Dead: Poems",
+    image: "https://i.postimg.cc/FzxBjT2m/9781555977856-pdpxl.jpg",
+    author: "Danez Smithr",
     category: "Poetry",
-    price: " 926",
+    price: " 284",
     quantity: 10,
   },
   {
-    id:'10',
+    id: "10",
     name: "Rich Dad Poor Dad",
-    image:
-      "https://i.postimg.cc/QdqdFD6n/image.jpg",
+    image: "https://i.postimg.cc/QdqdFD6n/image.jpg",
     author: "Robert Kiyosaki and Sharon Lechter",
     category: "Self-help",
     price: " 368",
     quantity: 10,
   },
   {
-    id:'11',
-    name: "Book2",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+    id: "11",
+    name: "Cherub: The Recruit",
+    image: "https://i.postimg.cc/523pnP9k/62a94c86a4a61381395336-w803h620.webp",
+    author: "Ian Edginton and Robert Muchamore",
     category: "Comics",
-    price: " 926",
+    price: " 414",
     quantity: 10,
   },
   {
-    id:'12',
-    name: "Book2",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+    id: "12",
+    name: "Everything I Know About Love",
+    image: "https://i.postimg.cc/xdnGD97f/46041465.jpg",
+    author: "Dolly Alderton",
     category: "Biography",
-    price: " 926",
+    price: " 391",
     quantity: 10,
   },
   // Add more product objects here
   {
-    id:'13',
+    id: "13",
     name: "The Hitchhiker’s Guide to the Galaxy",
-    image:
-      "/assets/Book Covers/hitchhikerguide.jpg",
+    image: "/assets/Book Covers/hitchhikerguide.jpg",
     author: "Douglas Adams",
     category: "Novel",
     price: "250",
     quantity: 10,
   },
   {
-    id:'14',
-    name: "Book3",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+    id: "14",
+    name: "Honey and Spice: A Reese's Book Club Pick",
+    image: "https://i.postimg.cc/gc80R3j7/honey-spice.jpg",
+    author: "Bolu Babalola",
     category: "Romance",
-    price: " 926",
+    price: " 437",
     quantity: 10,
   },
   {
-    id:'15',
-    name: "Book3",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+    id: "15",
+    name: "Pillow Thoughts",
+    image: "https://i.postimg.cc/9QsJq3rZ/9781449489755-pdpxl.jpg",
+    author: "Courtney Peppernellr",
     category: "Poetry",
-    price: " 926",
+    price: " 337",
     quantity: 10,
   },
   {
-    id:'16',
+    id: "16",
     name: "Atomic Habits",
-    image:
-      "https://i.postimg.cc/xCXfpz9W/image.jpg",
+    image: "https://i.postimg.cc/xCXfpz9W/image.jpg",
     author: "James Clear",
     category: "Self-help",
     price: " 450",
     quantity: 10,
   },
   {
-    id:'17',
-    name: "Book3",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+    id: "17",
+    name: "Noughts & Crosses (Graphic Novel)",
+    image: "/assets/Book Covers/Noughts and crosses.jpg",
+    author: "Ian Edginton/Novel by Malorie blackman",
     category: "Comics",
-    price: " 926",
+    price: " 364",
     quantity: 10,
   },
   {
-    id:'18',
-    name: "Book3",
-    image:
-      "https://i.postimg.cc/3RSTXX65/Closed-Book-Clip-Art-Black-and-White.jpg",
-    author: "An Author",
+    id: "18",
+    name: "The Inheritors: An Intimate Portrait of South Africa's Racial Reckoning",
+    image: "https://i.postimg.cc/g0gZC88s/59365047.jpg",
+    author: "Eve Fairbanks",
     category: "Biography",
-    price: " 926",
+    price: " 336",
     quantity: 10,
   },
 ];
 localStorage.setItem("Books", JSON.stringify(Products));
 
-// Products.forEach((product) => {
-//   display.innerHTML += `
-//     <div class="col">
-//               <img id="photo" src="${product.image}" alt="${product.name}">
-//               <h3>${product.name}</h3>
-//               <h3>${product.author}</h3>
-//               <p> R ${product.price}</p>
-//               <button onclick="addToCart(${product.name})" >Add to cart</button>
-//               </div>`;
-// });
 
 /* This is to display the books*/
 function productsDisplay() {
@@ -213,11 +185,12 @@ function productsDisplay() {
       elementProduct.innerHTML += `
       <div class="product-card col">
       <img src="${product.image}" alt="${product.name}" class="img-thumbnail">
-      <h3 class="product-name">${product.name}</h3>
-      <p class="author-name">${product.author}</p>
-      <p class="price">R ${product.price}</p>
+      <h4 class="product-name">${product.name}</h4>
+      <h6 class="author-name">${product.author}</h6>
+      <span class="price">R ${product.price}</span>
       <button  id="addCart" onclick="addClicked(${product.id})" >Add to Cart</button>
       </div>
+      <br>
       `;
       allNovels.appendChild(elementProduct);
     }
@@ -232,11 +205,12 @@ function productsDisplay() {
       elementProduct.innerHTML = `
       <div class="product-card col ">
       <img src="${product.image}" alt="${product.name}" class="img-thumbnail">
-      <h3 class="product-name">${product.name}</h3>
-      <p class="author-name">${product.author}</p>
-      <p class="price">R ${product.price}</p>
+      <h4 class="product-name">${product.name}</h4>
+      <h6 class="author-name">${product.author}</h6>
+      <span class="price">R ${product.price}</span>
       <button  id="addCart" onclick="addClicked(${product.id})" >Add to Cart</button>
       </div>
+      <br>
       `;
       allComics.appendChild(elementProduct);
     }
@@ -251,15 +225,14 @@ function productsDisplay() {
       elementProduct.innerHTML = `
       <div class="product-card col ">
       <img src="${product.image}" alt="${product.name}" class="img-thumbnail">
-      <h3 class="product-name">${product.name}</h3>
-      <p class="author-name">${product.author}</p>
-      <p class="price">R ${product.price}</p>
+      <h4 class="product-name">${product.name}</h4>
+      <h6 class="author-name">${product.author}</h6>
+      <span class="price">R ${product.price}</span>
       <button  id="addCart" onclick="addClicked(${product.id})" >Add to Cart</button>
       </div>
+      <br>
       `;
       allHelp.appendChild(elementProduct);
-      // ourAccessories.push(cart);
-      // elementProduct.push(cart);
     }
   });
 
@@ -272,15 +245,14 @@ function productsDisplay() {
       elementProduct.innerHTML = `
       <div class="product-card col ">
       <img src="${product.image}" alt="${product.name}" class="img-thumbnail">
-      <h3 class="product-name">${product.name}</h3>
-      <p class="author-name">${product.author}</p>
-      <p class="price">R ${product.price}</p>
+      <h4 class="product-name">${product.name}</h4>
+      <h6 class="author-name">${product.author}</h6>
+      <span class="price">R ${product.price}</span>
       <button  id="addCart" onclick="addClicked(${product.id})">Add to Cart</button>
       </div>
+      <br>
       `;
       allBiography.appendChild(elementProduct);
-      // ourAccessories.push(cart);
-      // elementProduct.push(cart);
     }
   });
 
@@ -293,128 +265,46 @@ function productsDisplay() {
       elementProduct.innerHTML = `
       <div class="product-card col ">
       <img src="${product.image}" alt="${product.name}" class="img-thumbnail">
-      <h3 class="product-name">${product.name}</h3>
-      <p class="author-name">${product.author}</p>
-      <p class="price">R ${product.price}</p>
+      <h4 class="product-name">${product.name}</h4>
+      <h6 class="author-name">${product.author}</h6>
+      <span class="price">R ${product.price}</span>
       <button  id="addCart" onclick="addClicked(${product.id})" >Add to Cart</button>
       </div>
+      <br>
       `;
       allHelp.appendChild(elementProduct);
-      // ourAccessories.push(cart);
-      // elementProduct.push(cart);
     }
   });
 
   // Romance
-  let count = 0
   Products.forEach((product) => {
     // using if statements
     if (product.category === "Romance") {
-      count++
-      console.log(count);
       let allRomance = document.getElementById("romance");
       let elementProduct = document.createElement("div");
       elementProduct.innerHTML = `
             <div class="product-card col ">
             <img src="${product.image}" alt="${product.name}" class="img-thumbnail">
-            <h3 class="product-name">${product.name}</h3>
-            <p class="author-name">${product.author}</p>
-            <p class="price">R ${product.price}</p>
+            <h4  class="product-name">${product.name}</h4>
+            <h6 class="author-name">${product.author}</h6>
+            <span class="price">R ${product.price}</span>
             <button id="addCart" onclick="addClicked(${product.id})">Add to Cart</button>
             </div>
+            <br>
             `;
       allRomance.appendChild(elementProduct);
-      // ourAccessories.push(cart);
-      // elementProduct.push(cart);
     }
   });
 }
-// this call displays you nut :[
-
 
 // Adding to cart biz
 /* The end of display display*/
 
 /*Cart display*/
-
-
-/*adding stuff to the cart */
-
-/*// add products to cart
-let addToCart = document.getElementById("addCart");
-let productRow = document.getElementsByClassName("product-row");
-
-for (let i = 0; i < addToCart.length; i++) {
-  button = addToCart[i];
-  button.addEventListener("click", addClicked);
-}
-
-function addClicked(event) {
-  button = event.target;
-  let cartItem = button.parentElement;
-  let itemName = cartItem.getElementsByClassName("product-name")[0].innerText;
-  let itemAuthor = cartItem.getElementsByClassName("author-name")[0].innerText;
-  let price = cartItem.getElementsByClassName("price")[0].innerText;
-
-  let Src = cartItem.getElementsByID("addCart")[0];
-  addItemToCart(itemName, itemAuthor, price);
-  updateCartPrice();
-  console.log();
-}
-
-function addItemToCart(price, itemAuthor, itemName) {
-  let productRow = document.createElement("div");
-  productRow.classList.add("product-row");
-  let productRows = document.getElementsByClassName("product-rows")[0];
-  let cartAdding = document.getElementsByID("addCart");
-
-  for (let i = 0; i < addToCart.length; i++) {
-    if (cartAdding[i] === Src) {
-      alert("This item has already been added to the cart");
-      return;
-    }
-  }
-
-  let cartItems = `
-  <div class="product-row">
-        <div>
-        <h2 class ="cart-name">${itemName}</h2>
-        <h3 class ="cart-author">${itemAuthor}</h3>
-        </div>
-        <span class ="cart-price">${price}</span>
-        <input class="product-quantity" type="number" value="1">
-        <button class="remove">Remove</button>
-        </div>
-        
-      `;
-  productRow.innerHTML = cartItems;
-  productRows.append(productRow);
-  productRow
-    .getElementsByClassName("remove")[0]
-    .addEventListener("click", removeItem);
-  productRow
-    .getElementsByClassName("product-quantity")[0]
-    .addEventListener("change", changeQuantity);
-  updateCartPrice();
-}
-
-// Remove products from cart
-let removeBtn = document.getElementsByClassName("remove");
-for (var i = 0; i < removeBtn.length; i++) {
-  button = removeBtn[i];
-  button.addEventListener("click", removeItem);
-}
-
-function removeItem(event) {
-  btnClicked = event.target;
-  btnClicked.parentElement.parentElement.remove();
-  updateCartPrice();
-}*/
-
-// 
+ 
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-// let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 
 function addClicked(productId) {
   let cartContainer = document.getElementById("cartBody");
@@ -436,40 +326,65 @@ function deleteFromCart(index) {
 updateCart()
 function updateCart() {
   let cartContainer = document.getElementById("cartBody");
-  // localStorage.setItem("products", JSON.stringify(cart));
-  // localStorage.setItem("cart", JSON.stringify(cart));
+
   cartContainer.innerHTML = "";
   cart.forEach((product, index) => {
       let cartProduct = document.createElement("div");
       cartProduct.innerHTML = `
       <span>${product.name}</span>
-      <span>${product.author}</span>
-      <span>R ${product.price}</span>
-      <input type="number" placeholder="1" min="1" width="50px" height="40px">
-      <p>R ${product.price}</p>
-      <button onclick="deleteFromCart(${index})" class="delbtn">Delete</button>`;
+      <span>By ${product.author}</span>
+      <input class="quantity ms-3" type="number" value="1" min="1">
+      <span class="CP ms-3">R ${product.price}</span>
+      <button onclick="deleteFromCart(${index})" class="delBtn p-1">X</button>
+      <hr>`;
       cartContainer.appendChild(cartProduct);
   });
     calculateTotal();
-}
+  }
+  
+/*// sort products by price or name 
+    function sortProducts() {
+      let sortingSelect = document.getElementById("sortingSelect");
+      let selectedIndex = sortingSelect.selectedIndex;
 
-productsDisplay();
-
-function calculateTotal() {
+      switch (selectedIndex) {
+        case 1:
+          Products.sort(function (a, b) {
+            return (
+              parseInt(a.price.substring(1)) - parseInt(b.price.substring(1))
+            );
+          });
+          break;
+        case 2:
+          Products.sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+          });
+          break;
+      }
+    }
+    sortProducts();*/
+    productsDisplay();
+  
+  function calculateTotal() {
     let totalElement = document.getElementById("total");
     let total = 0 
     cart.forEach(item => {
       total +=  eval(item.price)
     })
-
+    
     totalElement.textContent = `${total}`;
-}
-
-function clearCheckoutCart() {
+  }
+  
+  function clearCheckoutCart() {
     let modalFooter = document.querySelector(".modal-footer");
     modalFooter.innerHTML = `
     <h4>Thank You! Your Order Has Been Processed!</h4>`;
     cart = [];
     updateCart();
-}
+  }
 
+
+
+
+
+  

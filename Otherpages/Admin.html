@@ -64,6 +64,7 @@
                     <div class="container">
                       <input class="form-control" type="text" placeholder="Enter the name of the book" name="addName" id="addName" required />
                       <input class="form-control my-2" type="text" placeholder="Enter Author name" name="addAuthor" id="addAuthor" required></input>
+                      <input class="form-control my-2" type="url" placeholder="Enter picture" name="addPicture" id="addPicture" required></input>
                       <input class="form-control" type="number" placeholder="Enter price" name="addPrice" id="addPrice" required/>
                     <select class="form-control my-2" name="addCategory" id="addCategory" required>
                     <option value="placeholder">In what Category</option>
@@ -93,6 +94,12 @@
     <main>
         <br>
         <div class="admin-content p-5">
+            <br>
+            <br>
+
+            <div class="content">
+                <h2 class="title mt-3 text-center"> Admin dashboard</h2>
+
             <div class="button-group mt">
                 <!-- open the modal -->
                 <button type="button" class="btn btn-success text-center" id="new" data-bs-toggle="modal" data-bs-target="#NewProduct">Add</button>
@@ -107,15 +114,11 @@
                 </select>
             </div>
 
-            <div class="content">
-                <h2 class="title mt-3 text-center"> Admin dashboard</h2>
-
                 <table>
                     <thead>
                         <th>ID</th>
                         <th>Name and Author</th>
                         <th>Category</th>
-                        <th>Quantity</th>
                         <th>Price</th>
                         <th>action</th>
                     </thead>
@@ -130,13 +133,13 @@
     <!-- footer -->
     <footer>
         <br>
-        <div class="icons text-center">
-            <a class="m-5" href=""><i class="fa fa-phone icon"></i></a>
-            <a class="m-5" href=""><i class="fa fa-envelope icon"></i></a>
-            <a class="m-5" href=""><i class="fa-brands fa-instagram icon"></i></a>
-            <a class="m-5" href=""><i class="fa fa-location-dot icon"></i></a>
-            <a class="m-5" href=""><i class="fa fa-globe icon"></i></a>
-        </div>
+      <div class="icons text-center p-2">
+        <a class="m-1" href="http://spittoon.co.uk/wp-content/uploads/2019/01/error-meme.jpg"><i class="fa fa-phone icon"></i></a>
+        <a class="m-1" href="https://media.makeameme.org/created/hello-rtr56j.jpg"><i class="fa fa-envelope icon"></i></a>
+        <a class="m-1" href="https://goo.gl/maps/qnR6RGGvVR6MZyDb6?coh=178573&entry=tt"><i class="fa-brands fa-instagram icon"></i></a>
+        <a class="m-1" href="https://goo.gl/maps/qnR6RGGvVR6MZyDb6?coh=178573&entry=tt"><i class="fa fa-location-dot icon"></i></a>
+        <a class="m-1" href="/Otherpages/Esoteric Creatives.html"><i class="fa fa-globe icon"></i></a>
+      </div>
         <br>
         <div class="container mb-2 text-center">
             <div class="row align-items-end">
@@ -169,214 +172,3 @@
     <script src="https://kit.fontawesome.com/850ca6a355.js"></script>
 </body>
 </html>
-
-
-<!-- <tr>
-    <td>0</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
-<tr>
-    <td>1</td>
-    <td>To kill a Mockingbird by Harper Lee</td>
-    <td>Novel</td>
-    <td>10</td>
-    <td>R 234</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>2</td>
-    <td>The Alchemist by Paulo Coelho</td>
-    <td>Novel</td>
-    <td>10</td>
-    <td>R 124</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>3</td>
-    <td>The Hitchhiker’s Guide to the Galaxy by Douglas Adams</td>
-    <td>Novel</td>
-    <td>10</td>
-    <td>R 250</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>4</td>
-    <td>The Power of Now: A Guide to Spiritual Enlightenment by Eckhart Tolle</td>
-    <td>Self-Help</td>
-    <td>10</td>
-    <td>R 405</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>5</td>
-    <td>Rich Dad Poor Dad by Robert Kiyosaki and Sharon Lechter</td>
-    <td>Self-Help</td>
-    <td>10</td>
-    <td>R 368</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>6</td>
-    <td>Atomic Habits by James Clear</td>
-    <td>Self-Help</td>
-    <td>10</td>
-    <td>R 450</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>7</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>8</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>9</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>10</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>11</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>12</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>13</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>14</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>15</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>16</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>
- <tr>
-    <td>17</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>  
-  <tr>
-    <td>18</td>
-    <td>John by John Doe</td>
-    <td>Biography</td>
-    <td>10</td>
-    <td>R 1809</td>
-    <td>
-        <span class="edit" data-bs-toggle="modal" data-bs-target="editProduct${product.id}"> Edit </span>
-        <span class="delete" onclick='deleteProduct(JSON.stringify(product))'>Delete</span>
-    </td>
-</tr>  -->

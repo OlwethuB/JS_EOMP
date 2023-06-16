@@ -5,7 +5,7 @@ let products = JSON.parse(localStorage.getItem("Books"));
 let saveProduct = document.querySelector("#addProduct");
 let adminBody = document.querySelector("#adminContent");
 
-// table
+//  
 function display() {
   try {
     adminBody.innerHTML = "";
@@ -16,7 +16,6 @@ function display() {
                     <td>${product.id}</td>
                     <td>${product.name} by ${product.author}</td>
                     <td>${product.category}</td>
-                    <td>${product.Quantity}</td>
                     <td>R${product.price}</td>
                     <td>
                     <span class="edit" data-bs-toggle="modal" data-bs-target="#editProduct${
@@ -113,6 +112,7 @@ saveProduct.addEventListener("click", () => {
     const author = document.querySelector("#addAuthor").value;
     const price = document.querySelector("#addPrice").value;
     const category = document.querySelector("#addCategory").value;
+    const picture = document.querySelector("#addPicture").value
 
     let id =
       products.map((item) => item.id).at(-1) >= 1
@@ -125,6 +125,7 @@ saveProduct.addEventListener("click", () => {
       author,
       price,
       category,
+      picture,
     });
     localStorage.setItem("Books", JSON.stringify(products));
     display();
@@ -142,8 +143,8 @@ sorting.addEventListener("click", () => {
     sorting.textContent = "Sorted by asc (ID)";
     isToggle = true;
   } else {
-    products.sort((a, b) => b.id - a.id);
-    sorting.textContent = "Sorted by desc (ID)";
+    products.sort((a, b) => b.name - a.name);
+    sorting.textContent = "Sorted by desc (name)";
     isToggle = false;
   }
   display();
